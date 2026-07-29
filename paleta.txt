@@ -1,0 +1,18 @@
+Fundo / gradiente:
+#FFC2C3 - rosa claro
+#F359D2 - rosa/magenta
+#6B41BF - roxo
+#0E1938 - azul escuro
+
+Componentes:
+#D379EC - card
+#ECBFF9 - input
+#E1A8F0 - botão
+
+Texto:
+#FFFFFF - texto claro
+#000000 - texto escuro
+#ffffffc0 - texto branco com transparência
+
+Check-in sem papel
+Deixe as listas manuais de lado e organize as entradas diretamente pelo aplicativo.
