@@ -77,9 +77,13 @@ export default function Register() {
         return;
       }
 
-      Alert.alert("Sucesso", "Cadastro realizado com sucesso.");
+      Alert.alert("Sucesso", "Cadastro realizado! Verifique seu email para confirmar a conta.");
 
-      router.replace("/");
+      // manda pra tela de digitar o código recebido no email, já com o user_id
+      router.replace({
+        pathname: "/auth/register/verifyemail",
+        params: { user_id: data.user.id },
+      });
     } catch (error) {
       console.log(error);
       Alert.alert("Erro", "Não foi possível conectar ao servidor.");

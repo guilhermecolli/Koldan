@@ -1,6 +1,7 @@
 import bcrypt from "bcrypt";
 import db from "../config/db.js";
 import { gerarToken } from "../utils/token.js";
+import { verificarEmail } from "./sendVerificationEmail.service.js";
 
 export const register = async ({ name, email, cpf, password }) => {
   if (!name || !email || !cpf || !password) {
@@ -45,6 +46,12 @@ export const register = async ({ name, email, cpf, password }) => {
     email,
     cpf,
   };
+
+  // Dispara o email de verificação (não trava o cadastro se o envio falhar)
+  const emailResult = await verificarEmail(user.email, user.id);
+  if (!emailResult.success) {
+    console.error("Falha ao enviar email de verificação:", emailResult.message);
+  }
 
   const token = gerarToken(user);
 

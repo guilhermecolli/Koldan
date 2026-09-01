@@ -14,6 +14,13 @@ export default function HomeScreen() {
     <View style={styles.container}>
         <View style={styles.card}>
             <Text style={styles.title}>Eventos Ativos</Text>
+
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => router.push('/painel/metodoBarCodeScan')}
+            >
+              <Text style={styles.buttonText}>Código de Barras</Text>
+            </TouchableOpacity>
         </View>
     </View>
   );
