@@ -1,3 +1,3 @@
-const API_URL = "http://10.213.29.92:3000";
+const API_URL = "https://https://api.koldan.linceonline.com.br";
 
 export default API_URL;
